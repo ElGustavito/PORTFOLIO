@@ -1,0 +1,185 @@
+/* ================= VARIÁVEIS E TEMAS ================= */
+:root {
+  --bg-dark: #0F0F0F;
+  --bg-card: #141414;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border-gray: #262626;
+  --transition: 0.3s ease;
+  
+  /* Tema Pessoal (Laranja) */
+  --accent-color: #f97316;
+  --glow-color: rgba(249, 115, 22, 0.4);
+}
+
+/* Tema Arte (Amarelo) */
+body.mode-arte {
+  --accent-color: #eab308;
+  --glow-color: rgba(234, 179, 8, 0.4); 
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg-dark); color: var(--text-main); font-family: sans-serif; overflow-x: hidden; }
+
+/* ================= LAYOUT PRINCIPAL ================= */
+.main-layout { display: grid; min-height: 100vh; }
+@media (min-width: 768px) { 
+  .main-layout { grid-template-columns: 450px 1fr; } 
+}
+
+/* BARRA LATERAL AJUSTADA */
+.sidebar { 
+  background: var(--bg-card); 
+  padding: 3rem 2rem; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  border-right: 1px solid var(--border-gray);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.content-area { padding: 3rem 2rem; }
+.content-wrapper { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+
+/* ================= AVATARES ================= */
+.avatar-group { display: flex; gap: 1.5rem; margin-bottom: 2rem; justify-content: center; }
+.circle-option { border-radius: 50%; padding: 4px; cursor: pointer; transition: var(--transition); border: 2px solid transparent; }
+.circle-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; transition: var(--transition); }
+
+.circle-option.active-option { border-color: var(--accent-color); box-shadow: 0 0 30px var(--glow-color); }
+.active-img { transform: scale(1.05); }
+
+/* ================= INFO PANEL (TEXTOS CENTRADOS) ================= */
+.info-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.user-name { font-size: 1.4rem; font-weight: bold; margin-bottom: 5px; width: 100%; }
+.user-role { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem; width: 100%; }
+
+/* ================= BOTÕES SOCIAIS ================= */
+.social-links { 
+  width: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  gap: 0.6rem; 
+}
+
+.social-btn {
+  width: 100%;
+  max-width: 280px;
+  background: transparent;
+  border: 1px solid var(--border-gray);
+  padding: 0.7rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+.social-btn:hover { border-color: var(--accent-color); background: rgba(255,255,255,0.03); }
+.social-btn img { width: 16px; }
+
+/* ================= RODAPÉ BARRA LATERAL ================= */
+.sidebar-footer {
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+/* ================= PAINEIS RETRÁTEIS ================= */
+.panel-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gray);
+  border-radius: 4px;
+  transition: var(--transition);
+  margin-bottom: 5px;
+}
+
+.panel-header {
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.panel-header h2 { font-size: 1rem; font-weight: 500; }
+.icon-arrow { width: 14px; opacity: 0.8; transition: var(--transition); }
+
+.active-panel { border-color: var(--accent-color); box-shadow: 0 0 15px var(--glow-color); }
+
+.panel-content {
+  max-height: 0;
+  padding: 0 1.5rem;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.active-panel .panel-content {
+  max-height: 2000px;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  opacity: 1;
+}
+
+/* ================= GRADES E PROJETOS ================= */
+.grid-list-projects { display: flex; flex-direction: column; gap: 1rem; padding-top: 1rem; }
+
+.project-card {
+  background: #1a1a1a;
+  border: 1px solid var(--border-gray);
+  border-radius: 12px;
+  padding: 1.2rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+.project-card:hover { border-color: var(--accent-color); background: #1f1f1f; }
+.project-card img { width: 90px; height: 90px; border-radius: 10px; object-fit: cover; }
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 234px);
+  gap: 16px;
+  padding-top: 1rem;
+}
+
+.art-item {
+  width: 234px;
+  height: 229px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--border-gray);
+  transition: var(--transition);
+}
+
+.art-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.art-item:hover { border-color: var(--accent-color); box-shadow: 0 0 15px var(--glow-color); }
+.art-item:hover img { transform: scale(1.1); }
+
+.hidden { display: none; }
