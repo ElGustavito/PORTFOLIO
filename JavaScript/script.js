@@ -11,7 +11,7 @@ const dadosPerfis = {
     ],
     // Projetos Pessoal
     projetos: [
-      { titulo: 'Portal de Receitas', desc: 'A plataforma definitiva para hobbistas e culinaristas. Poste suas receitas, gerencie suas criações e simplifique sua rotina na cozinha', img: 'Imagens/Projetos/Portal-Receitas.png', link: 'processo.php' },
+      { titulo: 'Portal de Receitas', desc: 'A plataforma definitiva para hobbistas e culinaristas. Poste suas receitas, gerencie suas criações e simplifique sua rotina na cozinha', img: 'Imagens/Projetos/Portal-Receitas.png', link: 'http://elgustavito.github.io/Processo-Portal/' },
       { titulo: 'Dungeons & Math', desc: 'Explore masmorras clássicas e domine combates em turnos onde equações matemáticas ditam o poder dos seus ataques', img: 'Imagens/Projetos/Dungeons-Math.png', link: '#' },
       { titulo: 'Em Breve', desc: '...', img: 'Imagens/Projetos/Em-Breve.png', link: '#' }
     ]
