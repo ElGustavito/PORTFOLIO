@@ -7,7 +7,7 @@ const dadosPerfis = {
     sociais: [
       { nome: 'Github', icon: 'Icons/github.png.png', url: 'https://github.com/ElGustavito' },
       { nome: 'Linkedin', icon: 'Icons/linkedin.png.png', url: 'https://www.linkedin.com/in/gustavo-oliveira-745aa8364' },
-      { nome: 'Instagram', icon: 'Icons/instagram.png.png', url: 'https://www.instagram.com/el_gustavlto/' }
+      { nome: 'Instagram', icon: 'Icons/instagram.png.png', url: 'https://www.instagram.com/el_gustavlto_dev/' }
     ],
     // Projetos Pessoal
     projetos: [
