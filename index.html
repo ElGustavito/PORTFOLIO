@@ -3,77 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio - Gustavo Felipe</title>
+  <title>Portfólio - Gustavo Oliveira</title>
   <link rel="stylesheet" href="./Css/style.css" />
 </head>
 
-<!-- =====| Modo Base como "Pessoal" |===== -->
-<body id="mainBody" class="mode-pessoal"> 
-  <div class="main-layout">
+<!-- ====| Modo Base como "Pessoal" |==== -->
+<body id="mainBody" class="mode-pessoal">
 
-  <!-- ==========| Barra Lateral |========== -->
-    <aside class="sidebar">
-      <div class="profile-content">
-        <div class="avatar-group">
-          <div id="btnPessoal" class="circle-option active-option">
-            <img id="imgPessoal" src="Imagens/Fotos/Foto-Pessoal.png" class="circle-img active-img" />
-          </div>
-          <div id="btnArte" class="circle-option">
-            <img id="imgArte" src="Imagens/Fotos/Foto-Arte.png" class="circle-img" />
+  <!-- =======| BARRA DE NAVEGAÇÃO SUPERIOR |=======  -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <div class="brand-info">
+          <img src="Icons/logo.png" alt="Logo" class="nav-logo" />
+          <p class="brand-name">Gustavo</p>
+        </div>
+
+        <div class="switch-pill">
+          <button id="btnPessoal" class="pill-btn active"><b>Dev</b></button>
+          <button id="btnArte" class="pill-btn"><b>Arte</b></button>
+        </div>
+      </div>
+
+      <!-- ===================| Icons e Links |=================== -->
+      <ul class="nav-links">
+        <li><a href="#home"><img src="Icons/home.png" alt="" class="nav-icon" /> <b>Home</b></a></li>
+        <li><a href="#sobre"><img src="Icons/sobre-mim.png" alt="" class="nav-icon" /> <b>Sobre mim</b></a></li>
+        <li><a href="#projetos"><img src="Icons/projetos.png" alt="" class="nav-icon" /> <b>Projetos</b></a></li>
+        <li id="navArteLink" class="hidden"><a href="#arteBox"><img src="Icons/arte.png" alt="" class="nav-icon" /> <b>Artes</b></a></li>
+        <li><a href="#contato"><img src="Icons/contato.png" alt="" class="nav-icon" /> <b>Contato</b></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================| Foto e Nome |=================== -->
+  <div class="portfolio-container" id="home">
+    <header class="hero-header">
+      <div class="profile-block">
+        <div class="avatar-container">
+          <div class="avatar-frame">
+            <img id="currentAvatar" src="Imagens/Fotos/Foto-Pessoal.png" alt="Gustavo Oliveira" />
           </div>
         </div>
 
-      <!-- ================| Info |================ -->
-        <div id="painelInfo" class="info-panel">
-          <h2 class="user-name">Gustavo Felipe de Oliveira</h2>
+        <!-- =========| Info |========= -->
+        <div class="profile-info">
+          <h1 class="user-name">Gustavo Oliveira</h1>
           <p id="userRole" class="user-role"></p>
-
           <div id="socialLinksContainer" class="social-links"></div>
         </div>
       </div>
-      <footer class="sidebar-footer">
-        © 2026 Gustavo Felipe de Oliveira — Todos os direitos reservados
-      </footer>
-    </aside>
+    </header>
 
-    <main class="content-area">
-      <div class="content-wrapper">
+    <!-- ===================| Sobre Mim |=================== -->
+    <section id="sobre" class="section-block">
+      <h2 class="section-title">Quem sou eu?</h2>
+      <p id="sobreTexto" class="about-text"></p>
+    </section>
 
-      <!-- ===================| Sobre Mim |=================== -->
-        <section id="sobreBox" class="panel-box">
-          <div class="panel-header">
-            <h2>Sobre Mim</h2>
-            <img src="Icons/seta-direita.png.png" class="icon-arrow" />
-          </div>
-          <div class="panel-content">
-            <p id="sobreTexto"></p>
-          </div>
-        </section>
+    <!-- ===================| Projetos |=================== -->
+    <section id="projetos" class="section-block">
+      <h2 class="section-title">Projetos</h2>
+      <div id="listaProjetos" class="featured-projects-list"></div>
+    </section>
 
-      <!-- ===================| Artes |=================== -->
-        <section id="arteBox" class="panel-box hidden">
-          <div class="panel-header">
-            <h2>Minha Arte</h2>
-            <img src="Icons/seta-direita.png.png" class="icon-arrow" />
-          </div>
-          <div class="panel-content"> 
-            <div id="listaArte" class="art-grid"> </div>
-          </div>
-        </section>
+    <!-- =================| Artes |================= -->
+    <section id="arteBox" class="section-block hidden">
+      <h2 class="section-title">Galeria de Artes</h2>
+      <div id="listaArte" class="art-grid"></div>
+    </section>
 
-      <!-- ================| Projetos |================ -->
-        <section id="projetosBox" class="panel-box">
-          <div class="panel-header">
-            <h2>Projetos</h2>
-            <img src="Icons/seta-direita.png.png" class="icon-arrow" />
-          </div>
-          <div id="listaProjetos" class="panel-content grid-list">
-          </div>
-        </section>
+    <!-- ===================| Rodape e Contato |=================== -->
+    <footer id="contato" class="main-footer">
+      <p>© 2026 Gustavo Felipe de Oliveira — Todos os direitos reservados</p>
+    </footer>
 
-      </div>
-    </main>
   </div>
+
   <script src="./JavaScript/script.js"></script>
 </body>
 </html>
