@@ -39,11 +39,11 @@ const dadosPerfis = {
 };
 
 const artes = [
-  { img: 'Imagens/Arte/Eu-JJK.png', link: 'https://www.instagram.com/p/DJKoxxxSIb7/' },
-  { img: 'Imagens/Arte/Jona.png', link: 'https://www.instagram.com/p/DFVgYYnR585/' },
-  { img: 'Imagens/Arte/Veraz.png', link: 'https://www.instagram.com/p/DGRcjRfRV6v/' },
-  { img: 'Imagens/Arte/Gih-JJK.png', link: 'https://www.instagram.com/p/DJPEYzVRSIf/' },
-  { img: 'Imagens/Arte/Felipe-JJK.png', link: 'https://www.instagram.com/p/DJeyYfURGP9/' }
+  { img: 'Imagens/Arte/Port/Eu-JJK.png', link: 'https://www.instagram.com/p/DJKoxxxSIb7/' },
+  { img: 'Imagens/Arte/Port/Jona.png', link: 'https://www.instagram.com/p/DFVgYYnR585/' },
+  { img: 'Imagens/Arte/Port/Veraz.png', link: 'https://www.instagram.com/p/DGRcjRfRV6v/' },
+  { img: 'Imagens/Arte/Port/Gih-JJK.png', link: 'https://www.instagram.com/p/DJPEYzVRSIf/' },
+  { img: 'Imagens/Arte/Port/Felipe-JJK.png', link: 'https://www.instagram.com/p/DJeyYfURGP9/' }
 ];
 
 /* ===================== ELEMENTOS DA TELA ===================== */

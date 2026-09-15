@@ -64,7 +64,7 @@ body {
   align-items: center;
 }
 
-/* Logo|Nome */
+/* Marca: Logo, Nome e Switcher */
 .nav-brand {
   display: flex;
   align-items: center;
@@ -252,7 +252,32 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* Sobre|Parágrafos */
+/* CABEÇALHO DA SEÇÃO DE ARTES (COM BOTÃO "VER MAIS") */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header .section-title {
+  margin-bottom: 0;
+}
+
+.see-more-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.see-more-link:hover {
+  color: var(--accent-color);
+  transform: translateX(4px);
+}
+
+/* Sobre Mim & Espaçamento dos Parágrafos */
 #sobre {
   display: flex;
   flex-direction: column;
