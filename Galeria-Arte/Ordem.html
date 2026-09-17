@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordem - Galeria</title>
+  <link rel="stylesheet" href="../Css/arte.css">
+  <link rel="stylesheet" href="../Css/projeto-detalhes.css">
+</head>
+<body class="mode-arte">
+
+  <!-- BARRA DE NAVEGAÇÃO -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="../arte.html" class="back-link">&larr; <b>Voltar à Galeria</b></a>
+      </div>
+      <span class="brand-name">Ordem Paranormal</span>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="project-detail-container">
+    <header class="gallery-header">
+      <h1 class="gallery-title">Ordem Paranormal</h1>
+      <p class="gallery-description">
+        Nesse projeto fiz ilustrações de personagens oficiais e OCs do RPG. 
+        Tento fazer as artes praticando os diferentes traços da obra de acordo com o traço usado na temporada que assisti, 
+        mas também tento colocar um pouco mais do meu estilo
+      </p>
+      <p class="gallery-callout">
+          Caso queira ver com mais detalhes:<br>
+        <b>clique em qualquer arte para abrir e ler mais sobre o projeto</b>
+      </p>
+    </header>
+
+    <!-- GRID DAS IMAGENS -->
+    <section id="galeriaGrid" class="art-gallery-grid"></section>
+  </main>
+
+  <!-- ESTRUTURA DO POP-UP -->
+  <div id="modalArte" class="modal-overlay">
+    <div class="modal-content">
+      <button id="modalClose" class="modal-close-btn">&times;</button>
+      <div class="modal-body">
+        <div class="modal-image-container">
+          <img id="modalImg" src="" alt="Arte Expandida">
+        </div>
+        <div class="modal-text-container">
+          <h3 id="modalTitulo"></h3>
+          <p id="modalDesc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================| Rodape |============================= -->
+  <footer id="contato" class="main-footer">
+    <p>© 2026 Gustavo Felipe de Oliveira — Todos os direitos reservados</p>
+  </footer>
+
+  <!-- SCRIPT ESPECÍFICO DESSA PÁGINA -->
+  <script src="../JavaScript/Galeria-Arte/Ordem.js"></script>
+</body>
+</html>

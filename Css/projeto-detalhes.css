@@ -1,0 +1,185 @@
+/* ============== CONTAINER ============== */
+.project-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* ============== CABEÇALHO DA GALERIA ============== */
+.gallery-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.gallery-description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  max-width: 850px;
+}
+
+.gallery-callout {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 0.2rem;
+}
+
+.gallery-callout b {
+  color: var(--text-main);
+}
+
+/* ============== GRID DE 4 COLUNAS (PC) ============== */
+.art-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.art-card {
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  background: var(--bg-card);
+  transition: var(--transition);
+}
+
+.art-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px var(--glow-color);
+}
+
+.art-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============== POP-UP / MODAL ============== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  background: #16161a;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 85vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.modal-close-btn:hover {
+  color: var(--accent-color);
+}
+
+.modal-body {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Encaixa sem distorcer ou deixar barras */
+.modal-image-container {
+  flex: 0 0 45%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Alinha título e texto */
+.modal-text-container {
+  flex: 1;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.modal-text-container h3 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.modal-text-container p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ============== RESPONSIVIDADE (CELULARES E TABLETS) ============== */
+@media (max-width: 900px) {
+  .art-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .modal-image-container {
+    flex: none;
+    width: 100%;
+    height: 380px;
+  }
+
+  .modal-text-container {
+    padding: 1.5rem;
+  }
+}

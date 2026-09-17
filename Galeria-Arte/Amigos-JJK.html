@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amigos Jujutsu - Galeria</title>
+  <link rel="stylesheet" href="../Css/arte.css">
+  <link rel="stylesheet" href="../Css/projeto-detalhes.css">
+</head>
+<body class="mode-arte">
+
+  <!-- ======================| BARRA DE NAVEGAÇÃO |====================== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-links-left">
+        <a href="../arte.html" class="back-link">&larr; <b>Voltar à Galeria</b></a>
+      </div>
+      <div class="nav-brand">
+        <img src="../Imagens/Logo/GF-Logo.png" alt="Logo" class="nav-logo">
+        <span class="brand-name">Gustavo</span>
+      </div>
+  
+      <!-- Canto Direito: Elemento transparente que garante que a logo fique no MEIO exato -->
+      <div class="nav-spacer"></div>
+    </div>
+  </nav>
+
+  <!-- ======================| CONTEÚDO PRINCIPAL |====================== -->
+  <main class="project-detail-container">
+    <header class="gallery-header">
+      <h1 class="gallery-title">Meus Amigos em Jujutsu</h1>
+      <p class="gallery-description">
+         Nesse projeto fiz ilustrações minhas e de amigos meus como se estivéssemos no universo de Jujutsu, 
+         com a maioria tendo habilidades únicas e alguns com habilidades já conhecidas da obra
+      </p>
+      <p class="gallery-callout">
+          Caso queira ver com mais detalhes:<br>
+        <b>clique em qualquer arte para abrir e ler mais sobre o projeto</b>
+      </p>
+    </header>
+
+    <!-- ================| GRID DAS IMAGENS |================ -->
+    <section id="galeriaGrid" class="art-gallery-grid"></section>
+  </main>
+
+  <!-- ====================| ESTRUTURA DO POP-UP |==================== -->
+  <div id="modalArte" class="modal-overlay">
+    <div class="modal-content">
+      <button id="modalClose" class="modal-close-btn">&times;</button>
+      <div class="modal-body">
+        <div class="modal-image-container">
+          <img id="modalImg" src="" alt="Arte Expandida">
+        </div>
+        <div class="modal-text-container">
+          <h3 id="modalTitulo"></h3>
+          <p id="modalDesc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================| Rodape |============================= -->
+    <footer class="main-footer">
+      <p>© 2026 Gustavo Felipe de Oliveira — Todos os direitos reservados</p>
+    </footer>
+
+  <script src="../JavaScript/Galeria-Arte/JJK.js"></script>
+</body>
+</html>
