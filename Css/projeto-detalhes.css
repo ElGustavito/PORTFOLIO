@@ -5,6 +5,77 @@
   padding: 3rem 1.5rem;
 }
 
+  /* ============== BARRA DE NAVEGAÇÃO ============== */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(15, 15, 17, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 1.5rem; /* Mesma altura e espaçamento do style.css */
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Voltar à esquerda / Logo+Gustavo à direita */
+    align-items: center;
+  }
+
+  /* Link da Esquerda */
+  .back-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+  }
+
+  .back-link:hover {
+    color: var(--accent-color);
+    }
+
+  .back-link b {
+    color: var(--text-main);
+  }
+
+/* Marca da Direita (Logo + Gustavo) */
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .nav-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+/* ============== RESPONSIVIDADE (CELULARES) ============== */
+  @media (max-width: 650px) {
+    .back-link {
+      font-size: 0.85rem;
+    }
+
+    .brand-name {
+      font-size: 1rem;
+    }
+  }
+
 /* ============== CABEÇALHO DA GALERIA ============== */
 .gallery-header {
   display: flex;
